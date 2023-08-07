@@ -81,18 +81,22 @@ function startBracket() {
     let max;
     if(dir == 1 || dir == 3) max = programWidth;
     else max = programHeight
-    let counter = 1;
+    let counter = -1;
+
     movePointer();
 
     for(let i = 0; i < max; i++) {
-        if(program[comY][comX] == green3) {
-            counter--;
-        } else if(program[comY][comX] == green2) {
-            counter++
-        }
-        if(counter == 0) return;
         movePointer();
 
+        if(color2int(program[comY][comX]) == green3) {
+            counter++;
+        } else if(color2int(program[comY][comX]) == green2) {
+            counter--
+        }
+        
+        if(counter == 0) {
+            return;
+        }
     }
     running = false;
     consoleText += "green2 and green3 mismatch terminated on " + comX + " " + comY;
