@@ -1,0 +1,67 @@
+.touchpad {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10,1fr);
+    width:220px;
+    height:455px;
+}
+.web-wrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border: none;
+
+}
+
+input[type=range] {
+    grid-area:"slider";
+}
+
+.recreate-wrapper {
+    grid-row-start: 10;
+    grid-column-start:1;
+}
+
+.size-wrapper {
+    grid-row-start: 10;
+    grid-column-start:2;
+}
+
+.widthInput {
+    height:45px;
+    width:157px;
+}
+
+#screen {
+    width:1000px;
+    height:500px;
+}
+
+textarea {
+    grid-area:"textarea";
+}
+
+div {
+    border: 1px solid black;
+}
+
+.e-stop {
+    width:215px;
+    background-color:red;
+    border-radius: 999px;
+}
+
+input[type=file] {
+    width: 50px;
+    height: 50px;
+    grid-area: "button";
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    grid-area: "button";
+}
+.button-wrapper{
+    width:50px;
+    height:50px;
+}
