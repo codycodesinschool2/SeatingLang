@@ -1,6 +1,5 @@
 # SeatingLang
 an esoteric 2d programming language 
-SeatingLang is based on the program of brainfuck 
 to explain how each color worked we will give them each a name
 ![alt text](https://github.com/codycodesinschool2/SeatingLang/blob/main/tutorialImages/touchpad.png?raw=true)
 the top row are the reds and they each just have a number going up 1, 2, 3, and 4
