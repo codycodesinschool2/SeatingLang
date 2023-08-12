@@ -52,7 +52,8 @@ function initInterpreter() {
         6332319: rightDir,
         4243391:downDir,
         2154463:leftDir,
-        65535:upDir
+        65535:upDir,
+        8413343:getInput
     };
     for(let i = 0; i < 326767; i++) {
         data[i] = 0;
@@ -67,13 +68,13 @@ function rightDir() {dir = 0}
 function downDir() {dir = 1}
 function leftDir() {dir = 2}
 function upDir() {dir = 3}
-
+function getInput() {data[dp] = (prompt("")||" ").charCodeAt(0)}
 function haltCode() {running=false}
 function increaseDP() {dp++}
 function decreaseDP() {dp--}
 function incrementDP() {data[dp]++}
 function decrementDP() {data[dp]--}
-function outputDP() {consoleText += String.fromCharCode(data[dp]%256)}
+function outputDP() {consoleText += String.fromCharCode(data[dp]%128)}
 function startBracket() {
     let green2 = 8437568;
     let green3 = 8445728;
