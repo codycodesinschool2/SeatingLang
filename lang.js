@@ -74,7 +74,7 @@ function haltCode() {running=false}
 function increaseDP() {dp++}
 function decreaseDP() {dp--}
 function incrementDP() {data[dp]++}
-function decrementDP() {data[dp]--}
+function decrementDP() {data[dp]--;data[dp]=max(data[dp],0)}
 function outputDP() {consoleText += String.fromCharCode(data[dp]%128)}
 function startBracket() {
     let green2 = 8437568;
