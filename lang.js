@@ -53,7 +53,8 @@ function initInterpreter() {
         4243391:downDir,
         2154463:leftDir,
         65535:upDir,
-        8413343:getInput
+        8413343:getInput,
+        8405183:getMultiCharInput
     };
     for(let i = 0; i < 326767; i++) {
         data[i] = 0;
@@ -133,6 +134,17 @@ function endBracket() {
     }
     running = false;
     consoleText += "green2 and green3 mismatch terminated on " + comX + " " + comY;
+}
+
+function getMultiCharInput() {
+    inp = prompt("");
+    if(inp.length > data[dp]) {
+        inp = inp.slice(0,data[dp])
+    }
+
+    for(let i = 0; i < inp.length; i++) {
+        data[dp+i] = inp.charCodeAt(i)
+    }
 }
 
 function movePointer() {
